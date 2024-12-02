@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Grooming Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: whitesmoke;
+    }
+
+    .dashboard {
+      display: flex;
+      height: 90vh;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      font-size: 25px;
+      width: 200px;
+      background-color: salmon;
+      color:black;
+      padding: 20px;
+      border-radius: 15px;
+      box-sizing: border-box;
+    }
+
+    .sidebar .profile {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .sidebar .profile img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar ul li {
+      margin: 15px 0;
+      cursor: pointer;
+      color: black;
+    }
+
+    .sidebar ul li:hover {
+      color: white;
+    }
+
+    /* Main Content */
+    .main-content {
+      flex-grow: 1;
+      background-color: white;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .header {
+      background-color: green;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .stat-item {
+      width: 30%;
+      background-color: green;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .stat-item.red {
+      background-color: red;
+    }
+
+    .stat-item.brown {
+      background-color: brown;
+    }
+
+    .stat-item h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .stat-item p {
+      font-size: 24px;
+      margin: 5px 0;
+    }
+
+    .stat-item a {
+      font-size: 12px;
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Chart Section */
+    .chart {
+      text-align: center;
+    }
+
+    .chart img {
+      position: absolute;
+      top: 300px;
+      left: 700px;
+      max-width: 100%;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="profile">
+        <a href="index.html" style="border: 2px solid red; border-radius: 50%;"><img src="Profile.png" alt="Profile"></a>
+      </div>
+      <ul>
+        <li>Dashboard</li>
+        <li>Pet</li>
+        <li>Payment</li>
+        <li>Order Details</li>
+        <li>User Group</li>
+        <li>Logout</li>
+      </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="header" style="height: 50px; border-radius: 15px;">Pet Grooming Management System Dashboard</div>
+
+      <div class="stats">
+        <div class="stat-item">
+          <h3>Dog</h3>
+          <p>40</p>
+          <a href="#">More Info →</a>
+        </div>
+        <div class="stat-item red">
+          <h3>Rabbit</h3>
+          <p>30</p>
+          <a href="#">More Info →</a>
+        </div>
+        <div class="stat-item brown">
+          <h3>Cat</h3>
+          <p>40</p>
+          <a href="#">More Info →</a>
+        </div>
+      </div>
+
+      <div class="chart">
+        <img src="graph.png" alt="Bar Chart">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
